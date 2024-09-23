@@ -19,7 +19,7 @@ Netflix is one of the world's leading streaming services, offering a vast librar
          rating) AS t1 WHERE rank = 1;
 
 * 3 .**List all movies released in a specific year (e.g., 2020):** Filter content by release year.
-* 
+  
         select * from [Netfilx].[dbo].[netfilx] where type='Movie' and release_year=2020;
   
 * 4 .**Find the top 5 countries with the most content on Netflix:** Discover content distribution across countries.
