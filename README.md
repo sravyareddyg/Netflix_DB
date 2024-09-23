@@ -99,17 +99,16 @@ Netflix is one of the world's leading streaming services, offering a vast librar
 
       select * from [Netfilx].[dbo].[netfilx] where director is null;
 
-  
 * 13 .**Find how many movies actor 'Salman Khan' appeared in the last 10 years:** Analyze actor appearances over a decade.
 
-    select * from [Netfilx].[dbo].[netfilx] where cast like '%Salman Khan%' and release_year > year(GETDATE())-10; 
-
+      select * from [Netfilx].[dbo].[netfilx] where cast like '%Salman Khan%' and release_year > year(GETDATE())-10; 
 
 * 14 .**Find the top 10 actors who have appeared in the highest number of movies produced in India:** Discover prolific actors in Indian cinema.
 
 
       select top 10 value, count(*) from [Netfilx].[dbo].[netfilx] cross apply 
       string_split(cast,',') group by value order by count(*) desc;
+  
 * 15 .**Categorize the content based on the presence of the keywords 'kill' and 'violence' in the description field:** Label content based on specific keywords.
 
 
